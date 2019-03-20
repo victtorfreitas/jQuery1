@@ -1,0 +1,23 @@
+#frase{
+    font-size: 20px;
+    text-align: left;
+}
+.contadores{
+    font-size: 15px;
+}
+.campo-digitacao{
+    height: 120px;
+    border: 2px solid black;
+}
+.campo-desativado{
+    background-color: lightgrey;
+}
+.icones{
+    vertical-align: middle;
+}
+.borda-certa{
+    border: 2px solid green;
+}
+.borda-errada{
+    border: 2px solid red;
+}

@@ -3,21 +3,36 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/libs/materialize.min.css">
+    <link rel="stylesheet" href="css/libs/google-fonts.css">
+    <link rel="stylesheet" href="css/estilos.css">
     <title>Alura Typer</title>
 </head>
 
 <body>
-    <h1>Alura Typer</h1>
-    <p id="frase">Esta frase tem cinco palavras.</p>
-    <ul>
-        <li><span id="palavras">0</span> palavras.</li>
-        <li><span id="segundos">3</span> segundos.</li>
-    </ul>
-    <textarea class="campo-digitacao" id="" cols="30" rows="10"></textarea>
-    <ul>
-        <li><span class="qtd-caracteres">0</span> Caracteres.</li>
-        <li><span class="qtd-palavras">0</span> Palavras.</li>
-    </ul>
+    <div class="container">
+        <h1 class="center">Alura Typer</h1>
+        <p id="frase" class="center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium aliquid corrupti, repellendus itaque ad adipisci sint totam aut possimus pariatur dolorum velit perferendis quae officia vitae optio qui eligendi eaque!</p>
+        <ul class="contadores center">
+            <li>
+                <i class="samll material-icons icones">description</i>
+                <span id="palavras">0</span> palavras.
+            </li>
+            <li>
+                <i class="small material-icons icones">query_builder</i>
+                <span id="segundos">3</span> segundos.</li>
+        </ul>
+        <textarea class="campo-digitacao" id="" cols="30" rows="10"></textarea>
+        <div class="botoes">
+            <a id="btn-reset" class="btn-floating btn-large waves-effect waves-light red">
+                <i class="material-icons">restore</i>
+            </a>
+        </div>
+        <ul class="contadores center">
+            <li><span class="qtd-caracteres">0</span> Caracteres.</li>
+            <li><span class="qtd-palavras">0</span> Palavras.</li>
+        </ul>
+    </div>
     <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
 </body>
