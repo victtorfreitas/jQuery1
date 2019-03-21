@@ -12,7 +12,9 @@
 <body>
     <div class="container">
         <h1 class="center">Alura Typer</h1>
-        <p id="frase" class="center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium aliquid corrupti, repellendus itaque ad adipisci sint totam aut possimus pariatur dolorum velit perferendis quae officia vitae optio qui eligendi eaque!</p>
+        <p id="frase" class="center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium aliquid
+            corrupti, repellendus itaque ad adipisci sint totam aut possimus pariatur dolorum velit perferendis quae
+            officia vitae optio qui eligendi eaque!</p>
         <ul class="contadores center">
             <li>
                 <i class="samll material-icons icones">description</i>
@@ -32,6 +34,39 @@
             <li><span class="qtd-caracteres">0</span> Caracteres.</li>
             <li><span class="qtd-palavras">0</span> Palavras.</li>
         </ul>
+        <div class="placar">
+            <h3 class="center">Placar</h3>
+            <table class="centered bordered">
+                <thead>
+                    <th>Nome</th>
+                    <th>N° Palavras</th>
+                    <th>Remove</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Victtor</td>
+                        <td>05</td>
+                        <td>
+                            <a href="#">
+                                <i class="small material-icons">delete</i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Victtor</td>
+                        <td>05</td>
+                        <td>
+                            <a href="#" class="remove-element" onclick="remove()">
+                                <i class="small material-icons">delete</i>
+                            </a>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+
     </div>
     <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>

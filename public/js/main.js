@@ -30,6 +30,7 @@ function contaSegundos() {
             campoDigitacao.attr('disabled', true);
             $('#btn-reset').attr('disabled', false);
             campoDigitacao.toggleClass('campo-desativado');
+            gravaPlacar();
             clearInterval(cronometro);
         }
     }, 1000);
@@ -71,5 +72,31 @@ $('#btn-reset').click(function () {
     iniciaCronometro();
     campoDigitacao.removeClass('borda-certa');
     campoDigitacao.removeClass('borda-errada');
+});
+
+function gravaPlacar() {
+    let tbody = $('.placar').find('tbody');
+    let numPalavras = $('.qtd-palavras').text();
+    let remove = "<a href='#' onclick='remove()'><i class='small material-icons'>delete</i></a>";
+    let campoTabela = "<tr><td>" + nomeJogador + "</td><td>" + numPalavras + "</td><td>" + remove + "</td></tr>";
+    tbody.append(campoTabela);
+}
+
+function createElement(nome){
+    let nomeJogador = "Victtor02";
+
+    let trPai = $('<tr>');
+    let colNome = $('<td>');
+    let colQtdPalavras = $()
+    
+    colNome.text(nomeJogador);
+
+    console.log(trPai);
+    
+}
+
+$('.remove-element').click(function (e) {
+    e.preventDefault();
+    $(this).parent().parent().remove();
 });
 
