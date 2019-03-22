@@ -62,6 +62,7 @@ function iniciaCronometro() {
         contaSegundos();
     });
 }
+
 $('#btn-reset').click(function () {
     campoDigitacao.attr('disabled', false);
     campoDigitacao.val("");
@@ -76,27 +77,30 @@ $('#btn-reset').click(function () {
 
 function gravaPlacar() {
     let tbody = $('.placar').find('tbody');
-    let numPalavras = $('.qtd-palavras').text();
-    let remove = "<a href='#' onclick='remove()'><i class='small material-icons'>delete</i></a>";
-    let campoTabela = "<tr><td>" + nomeJogador + "</td><td>" + numPalavras + "</td><td>" + remove + "</td></tr>";
-    tbody.append(campoTabela);
+    tbody.append(createElement());
 }
 
-function createElement(nome){
+function createElement() {
     let nomeJogador = "Victtor02";
-
     let trPai = $('<tr>');
     let colNome = $('<td>');
-    let colQtdPalavras = $()
-    
+    let colQtdPalavras = $('<td>');
+    let colRemove = $('<td>');
+    let link = $('<a>');
+    let icone = $('<i>');
+    icone.addClass('small material-icons').text('delete');
+    link.attr('href', '#').addClass('remove-element');
+    link.click(remover);
     colNome.text(nomeJogador);
-
-    console.log(trPai);
-    
+    colRemove.append(link.append(icone));
+    colQtdPalavras.text($('.qtd-palavras').text());
+    trPai.append(colNome);
+    trPai.append(colQtdPalavras);
+    trPai.append(colRemove);
+    return trPai;
 }
 
-$('.remove-element').click(function (e) {
-    e.preventDefault();
+function remover() {
     $(this).parent().parent().remove();
-});
+};
 
